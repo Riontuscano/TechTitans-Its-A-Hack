@@ -1,1 +1,1 @@
-print("bhai karna kya hai koi to bolo *_* ~ junaid ")
+print("koi to reply do guys *_* ...")

@@ -67,15 +67,12 @@ except cv2.error as e:
     print(f"Error loading model files: {e}")
     exit(1)
 
-# Open the video file or webcam
 video = cv2.VideoCapture(args.image if args.image else 0)
 padding = 20
 
-# Initialize gender counters
 male_count = 0
 female_count = 0
 
-# Loop over the frames from the video
 while cv2.waitKey(1) < 0:
     hasFrame, frame = video.read()
     if not hasFrame:
@@ -86,7 +83,7 @@ while cv2.waitKey(1) < 0:
     if not faceBoxes:
         print("No face detected")
 
-    male_count = 0  # Reset counts for each frame
+    male_count = 0  
     female_count = 0
 
     genders = []

@@ -139,5 +139,23 @@
     box-shadow: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 
-
 }
+
+.charts{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.chart{
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);  
+}
+
+
+
+

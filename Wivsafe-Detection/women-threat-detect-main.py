@@ -9,7 +9,7 @@ import os
 punchFlag = False
 manyMen = False
 loneWomen = False
-violenceByMen = False  # punch, slap, hit on face, beating 
+violenceByMen = False  
 
 # Load the violence detection model
 violence_model = load_model('TechTitans-Its-A-Hack/Wivsafe-Detection/Violence-Detector/violence_detection.keras')

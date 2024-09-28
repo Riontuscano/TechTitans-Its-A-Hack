@@ -12,10 +12,10 @@ loneWomen = False
 violenceByMen = False  # punch, slap, hit on face, beating 
 
 # Load the violence detection model
-violence_model = load_model('Wivsafe-Detection/Violence-Detector/violence_detection.keras')
+violence_model = load_model('TechTitans-Its-A-Hack/Wivsafe-Detection/Violence-Detector/violence_detection.keras')
 
 # Load the gender detection models
-model_base_path_for_gender = "Wivsafe-Detection/Gender-Detector/"
+model_base_path_for_gender = "TechTitans-Its-A-Hack/Wivsafe-Detection/Gender-Detector/"
 faceProto = os.path.join(model_base_path_for_gender, "opencv_face_detector.pbtxt")
 faceModel = os.path.join(model_base_path_for_gender, "opencv_face_detector_uint8.pb")
 ageProto = os.path.join(model_base_path_for_gender, "age_deploy.prototxt")

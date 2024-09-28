@@ -6,16 +6,21 @@ import cvlib as cv
 import mediapipe as mp
 import os
 
+from Help_Detector.DetectHelp import HandGestureDetector
+#from hand_gesture_detector import HandGestureDetector
+
 punchFlag = False
 manyMen = False
 loneWomen = False
 violenceByMen = False  
 
+
+
 # Load the violence detection model
-violence_model = load_model('TechTitans-Its-A-Hack/Wivsafe-Detection/Violence-Detector/violence_detection.keras')
+violence_model = load_model('TechTitans-Its-A-Hack/Wivsafe_Detection/Violence_Detector/violence_detection.keras')
 
 # Load the gender detection models
-model_base_path_for_gender = "TechTitans-Its-A-Hack/Wivsafe-Detection/Gender-Detector/"
+model_base_path_for_gender = "TechTitans-Its-A-Hack/Wivsafe_Detection/Gender_Detector/"
 faceProto = os.path.join(model_base_path_for_gender, "opencv_face_detector.pbtxt")
 faceModel = os.path.join(model_base_path_for_gender, "opencv_face_detector_uint8.pb")
 ageProto = os.path.join(model_base_path_for_gender, "age_deploy.prototxt")
@@ -203,6 +208,13 @@ while webcam.isOpened():
     # Break the loop on 'q' key press
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+    # # Create an instance of the HandGestureDetector
+    # detector = HandGestureDetector()
+
+    # # Run the gesture detection
+    # detector.run()
+
 
 # Release the webcam and close windows
 webcam.release()

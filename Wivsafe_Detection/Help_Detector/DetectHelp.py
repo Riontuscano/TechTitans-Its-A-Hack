@@ -1,6 +1,6 @@
 import cv2
 import time
-import HandTracking as htm
+from Help_Detector import HandTracking as htm
 
 class HandGestureDetector:
     def __init__(self, wCam=640, hCam=480, detectionCon=0.75):

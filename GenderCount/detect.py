@@ -43,7 +43,7 @@ parser.add_argument('--image')
 args = parser.parse_args()
 
 # Define the paths for the models and prototxt files
-model_base_path = "TechTitans-Its-A-Hack\GenderCount"
+model_base_path = "C:/Users/junai/Desktop/coding/Hackathons/TechTitans-Its-A-Hack/TechTitans-Its-A-Hack/GenderCount"
 
 # Update the file paths to the correct absolute paths
 faceProto = os.path.join(model_base_path, "opencv_face_detector.pbtxt")

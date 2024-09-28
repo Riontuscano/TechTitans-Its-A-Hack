@@ -43,7 +43,7 @@ parser.add_argument('--image')
 args = parser.parse_args()
 
 # Define the paths for the models and prototxt files
-model_base_path = "GenderCount/"
+model_base_path = "Wivsafe-Detection/"
 
 # Update the file paths to the correct absolute paths
 faceProto = os.path.join(model_base_path, "opencv_face_detector.pbtxt")

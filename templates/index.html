@@ -6,6 +6,12 @@
     <title>Wivsafe | Women Safey App </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @font-face {
+      font-family: rj;
+      src: url("{{ url_for('static', filename='css/Rejouice-Headline.ttf') }}");
+    }
+    </style>
 </head>
 <body>
      <div class="container">
@@ -67,6 +73,7 @@
                         <td>Name</td>
                         <td>Time</td>
                         <td>Location</td>
+                        <td>Emergency Contact</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,6 +91,10 @@
                         <td class="location">
                             <p>00.000.0002</p>
                         </td>
+
+                        <td class="contact">
+                            <p>+91 599-444-994-3</p>
+                        </td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -99,6 +110,10 @@
                         <td class="location">
                             <p>00.000.0002</p>
                         </td>
+
+                        <td class="contact">
+                            <p>+91 599-444-994-3</p>
+                        </td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -114,6 +129,10 @@
                         <td class="location">
                             <p>00.000.0002</p>
                         </td>
+
+                        <td class="contact">
+                            <p>+91 599-444-994-3</p>
+                        </td>
                     </tr>
                     <tr>
                         <td class="people">
@@ -128,6 +147,9 @@
 
                         <td class="location">
                             <p>00.000.0002</p>
+                        </td>
+                        <td class="contact">
+                            <p>+91 599-444-994-3</p>
                         </td>
                     </tr>
                 </tbody>
@@ -135,7 +157,6 @@
            </dir>
         </div>
      </div>   
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

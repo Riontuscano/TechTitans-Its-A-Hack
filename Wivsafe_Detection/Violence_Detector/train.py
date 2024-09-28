@@ -20,7 +20,7 @@ data = []
 labels = []
 
 # Load image files from the dataset
-dataset_path = r'Wivsafe-Detection\Violence-Detector'
+dataset_path = r'Wivsafe_Detection\Violence_Detector'
 violent_images = glob.glob(os.path.join(dataset_path, 'violent', '*.jpg'))
 non_violent_images = glob.glob(os.path.join(dataset_path, 'non-violent', '*.jpg'))
 
@@ -79,7 +79,7 @@ model.compile(loss="sparse_categorical_crossentropy", optimizer=opt, metrics=["a
 H = model.fit(trainX, trainY, validation_data=(testX, testY), epochs=epochs, batch_size=batch_size, verbose=1)
 
 # Save the model to disk
-model.save(r'Wivsafe-Detection/Violence-Detector/violence_detection.keras')
+model.save(r'Wivsafe_Detection/Violence_Detector/violence_detection.keras')
  # Save in .keras format
 
 # Plot training/validation loss/accuracy
@@ -96,5 +96,5 @@ plt.ylabel("Loss/Accuracy")
 plt.legend(loc="upper right")
 
 # Save plot to disk
-plt.savefig(r'Wivsafe-Detection/Violence-Detector/plot.png')
+plt.savefig(r'Wivsafe_Detection/Violence_Detector/plot.png')
 

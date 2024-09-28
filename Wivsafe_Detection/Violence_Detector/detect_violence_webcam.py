@@ -6,7 +6,7 @@ import cvlib as cv
 import mediapipe as mp
 
 # Load model
-model = load_model(r'Wivsafe-Detection\Violence-Detector\violence_detection.keras')
+model = load_model(r'Wivsafe_Detection\Violence_Detector\violence_detection.keras')
 
 # Initialize Mediapipe
 mp_drawing = mp.solutions.drawing_utils

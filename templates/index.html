@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wivsafe | Women Safey App </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
      <div class="container">
         <div class="topbar">
-            <h2>WivSafe</h2>
-        </div>
+            <div class="logo">
+                <h2>Wiv<span>Safe</span>.</h2>
+            </div>  
         <div class="search">    
             <input type="text" id="search" placeholder="Search Here">
             <label for="search"><i class='bx bx-search-alt'></i></label>
         </div>
+    
         <i class='bx bx-bell'></i>
         <div class="user">
-            <img src="" alt="">
+            <img src="{{ url_for('static', filename='img/profilewivsafe.jpg') }}" alt="">
         </div>
-        <div class="sidebar"></div>
+    </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-home'></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <div class="main"></div>
      </div>   

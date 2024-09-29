@@ -2,6 +2,38 @@ import cv2
 import time
 import HandTracking as htm
 from location import LocationService  # Import location service
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import Integer, String, Float
+
+app = Flask(__name__)
+
+##CREATE DATABASE
+class Base(DeclarativeBase):
+    pass
+
+# configure the SQLite database, relative to the app instance folder
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///newCoordinates123.db"
+
+db = SQLAlchemy(model_class=Base)
+# initialize the app with the extension
+db.init_app(app)
+
+class Coord(db.Model):
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    state: Mapped[str] = mapped_column(String, nullable=False)
+    address: Mapped[str] = mapped_column(String, nullable=False)
+    latitude: Mapped[float] = mapped_column(Float, nullable=False)  # Corrected column name
+    longitude: Mapped[float] = mapped_column(Float, nullable=False)  # Corrected column name
+
+    def __repr__(self):
+        return f'<Coord {self.state}, {self.address}>'
+   
+# creates the table
+with app.app_context():
+    db.create_all()
+
 
 class HandGestureDetector:
     def __init__(self, wCam=640, hCam=480, detectionCon=0.75):
@@ -100,7 +132,22 @@ class HandGestureDetector:
                         self.gesture_sequence.clear()  # Clear sequence after detection
                         
                         # Fetch and display location
-                        self.location_service.get_location_and_display()  # Call your location service
+                        self.location_service.get_location_and_display() 
+                        lat_long = self.location_service.get_current_location_details()
+                        if lat_long:
+                            state = lat_long['state']
+                            address = lat_long['address']
+                            coordinates = lat_long['coordinates']
+                            latitude = coordinates[0] if coordinates else 0.0
+                            longitude = coordinates[1] if coordinates else 0.0
+
+                    # Save data to the database
+                            new_data = Coord(state=state, address=address, latitude=latitude,longitude=longitude)
+                            with app.app_context():  # Make sure you're within the app context
+                                db.session.add(new_data)
+                                db.session.commit()
+
+                            print("Data saved to the database.")  # Call your location service
                         print("HELP detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")  # Print when help is detected
 
                 # Display the detected gesture on the image

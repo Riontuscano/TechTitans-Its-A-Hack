@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wivsafe | Women Safey App </title>
+    <title>Wivsafe | Women Safety App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tpStyle.css') }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         @font-face {
-      font-family: rj;
-      src: url("{{ url_for('static', filename='css/Rejouice-Headline.ttf') }}");
-    }
+            font-family: rj;
+            src: url("{{ url_for('static', filename='css/Rejouice-Headline.ttf') }}");
+        }
     </style>
 </head>
 <body>
-     <div class="container">
+    <div class="container">
         <div class="topbar">
             <div class="logo">
                 <h2>Wiv<span>Safe</span>.</h2>
-            </div>  
-        <div class="search">    
-            <input type="text" id="search" placeholder="Search Here">
-            <label for="search"><i class='bx bx-search-alt'></i></label>
+            </div>
+            <div class="search">    
+                <input type="text" id="search" placeholder="Search Here">
+                <label for="search"><i class='bx bx-search-alt'></i></label>
+            </div>
+            <i class='bx bx-bell'></i>
+            <div class="user">
+                <img src="{{ url_for('static', filename='img/profilewivsafe.jpg') }}" alt="">
+            </div>
         </div>
-    
-        <i class='bx bx-bell'></i>
-        <div class="user">
-            <img src="{{ url_for('static', filename='img/profilewivsafe.jpg') }}" alt="">
-        </div>
-    </div>
         <div class="sidebar">
             <ul>
                 <li>
@@ -52,7 +51,7 @@
                 <li>
                     <a href="#">
                         <i class='bx bxs-cog'></i>
-                        <h3>Setting</h3>
+                        <h3>Settings</h3>
                     </a>
                 </li>
                 <li>
@@ -66,74 +65,31 @@
 
         <div class="main">
             <div class="cctv-video">
-                <video width="320" height="240" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                  Your browser does not support the video tag.
-                  </video>
-               </div>
-           <dir class="board">
-            <table width ="100%">
-                <thead>
-                    <tr>
-                        <td>Time</td>
-                        <td>Location</td>
-                    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                 
-                        <td class="time">
-                            <p>11:30:49</p>
-                        </td>
-
-                        <td class="location">
-                            <p>00.000.0002</p>
-                        </td>
-
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p>11:30:49</p>
-                        </td>
-
-                        <td class="location">
-                            <p>00.000.0002</p>
-                        </td>
-
-                      
-                    </tr>
-                    <tr>
-                       
-                        <td class="time">
-                            <p>11:30:49</p>
-                        </td>
-
-                        <td class="location">
-                            <p>00.000.0002</p>
-                        </td>
-
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p>11:30:49</p>
-                        </td>
-
-                        <td class="location">
-                            <p>00.000.0002</p>
-                        </td>
-                     
-                    </tr>
-                </tbody>
-            </table>
-           </dir>
+                <img src="{{ url_for('video_feed') }}" style="width: 100%; height: auto;" />
+            </div>
+            <div class="board">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Time</td>
+                            <td>Location</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">
+                                <p>11:30:49</p>
+                            </td>
+                            <td class="location">
+                                <p>00.000.0002</p>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as necessary -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-     </div>   
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="static/js/script.js"></script>

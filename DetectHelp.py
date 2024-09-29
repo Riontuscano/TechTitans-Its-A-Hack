@@ -101,7 +101,7 @@ class HandGestureDetector:
                         
                         # Fetch and display location
                         self.location_service.get_location_and_display()  # Call your location service
-                        print("HELP detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")  # Print when help is detected
+                        print("HELP detected!")  # Print when help is detected
 
                 # Display the detected gesture on the image
                 if gesture:

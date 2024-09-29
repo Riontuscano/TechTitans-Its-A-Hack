@@ -6,7 +6,7 @@ class LocationService:
     
     def get_current_location_details(self):
         try:
-            self.g = geocoder.ip('me')  # Get location information using IP
+            self.g = geocoder.ip('me')  
             if self.g.latlng is not None:
                 location_details = {
                     'coordinates': self.g.latlng,

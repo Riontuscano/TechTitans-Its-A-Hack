@@ -32,7 +32,7 @@
         <div class="sidebar">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <i class='bx bxs-dashboard'></i>
                         <h3>Dashboard</h3>
                     </a>
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/CCtv">
+                    <a href="#">
                         <i class='bx bxs-camera-movie'></i>
                         <h3>CCtv Updates</h3>
                     </a>
@@ -65,16 +65,31 @@
         </div>
 
         <div class="main">
+            <div class="cctv-video">
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
+               </div>
            <dir class="board">
             <table width ="100%">
                 <thead>
                     <tr>
+                        <td>Name</td>
                         <td>Time</td>
                         <td>Location</td>
+                        <td>Emergency Contact</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -88,6 +103,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -101,6 +122,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -114,6 +141,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -131,26 +164,6 @@
         </div>
      </div>   
 
-
-
-     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        const firebaseConfig = {
-          apiKey: "AIzaSyCwa_4kyFxVb8rHOOhp35Nqn83x8D77Oho",
-          authDomain: "wivsafe.firebaseapp.com",
-          projectId: "wivsafe",
-          storageBucket: "wivsafe.appspot.com",
-          messagingSenderId: "1082668097264",
-          appId: "1:1082668097264:web:1df75ded408c0a83592c35",
-          measurementId: "G-KG34JPG6X3"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="static/js/script.js"></script>
 </body>

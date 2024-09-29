@@ -11,6 +11,18 @@
             font-family: rj;
             src: url("{{ url_for('static', filename='css/Rejouice-Headline.ttf') }}");
         }
+        .gesture-detection {
+            position: relative;
+            width: 320px; /* Width of the small window */
+            height: 240px; /* Height of the small window */
+            border: 2px solid #ccc; /* Optional styling */
+            margin: 20px; /* Space around the video */
+        }
+        .gesture-detection iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+        }
     </style>
 </head>
 <body>
@@ -64,125 +76,31 @@
         </div>
 
         <div class="main">
-            <div class="cctv-video">
-                <video width="320" height="240" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                  Your browser does not support the video tag.
-                  </video>
-               </div>
-           <dir class="board">
-            <table width ="100%">
-                <thead>
-                    <tr>
-                        <td>Time</td>
-                        <td>Coords</td>
-                        <td>Location</td>
-                    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                 
-                        <td class="time">
-                            <p>11:37:48</p>
-                        </td>
-                        <td class="Coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p>Virar,Mumbai</p>
-                        </td>
-
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p></p>
-                        </td>
-                        <td class="Coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p></p>
-                        </td>
-
-                      
-                    </tr>
-                    <tr>
-                       
-                        <td class="time">
-                            <p></p>
-                        </td>
-                        <td class="coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p></p>
-                        </td>
-
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p></p>
-                        </td>
-
-                        <td class="coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p></p>
-                        </td>
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p></p>
-                        </td>
-
-                        <td class="Coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p></p>
-                        </td>
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p></p>
-                        </td>
-
-                        <td class="Coords">
-                            <p>000.44.333</p>
-                        </td>
-
-                        <td class="location">
-                            <p></p>
-                        </td>
-                     
-                    </tr>
-                    <tr>
-                     
-                        <td class="time">
-                            <p></p>
-                        </td>
-
-                        <td class="Coords">
-                            <p>000.44.333</p>
-                        </td>
-                        <td class="location">
-                            <p></p>
-                        </td>
-                     
-                    </tr>
-                </tbody>
-            </table>
-           </dir>
+            <div class="gesture-detection">
+                <h3>Gesture Detection</h3>
+                <iframe src="/video_feed" title="Gesture Detection Stream"></iframe> <!-- Adjust the URL to your video feed if necessary -->
+            </div>
+            <dir class="board">
+                <table width ="100%">
+                    <thead>
+                        <tr>
+                            <td>Time</td>
+                            <td>Location</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">
+                                <p>11:30:49</p>
+                            </td>
+                            <td class="location">
+                                <p>00.000.0002</p>
+                            </td>
+                        </tr>
+                        <!-- Additional rows -->
+                    </tbody>
+                </table>
+            </dir>
         </div>
     </div>
 

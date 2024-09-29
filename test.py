@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/CCtv')
+def CCtv():
     return render_template('CCtv.html')
 
 def generate_frames():

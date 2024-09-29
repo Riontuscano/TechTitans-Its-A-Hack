@@ -239,3 +239,13 @@ tbody tr td{
     width: 500px;
     border-radius: 10px;
 }
+/* iframe{
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+} */
+
+.gesture-detection{
+    height: 600px;
+    width: 600px;
+}

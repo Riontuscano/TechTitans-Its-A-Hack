@@ -65,16 +65,25 @@
         </div>
 
         <div class="main">
+            <div class="chart"></div>
            <dir class="board">
             <table width ="100%">
                 <thead>
                     <tr>
+                        <td>Name</td>
                         <td>Time</td>
                         <td>Location</td>
+                        <td>Emergency Contact</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -88,6 +97,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -101,6 +116,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -114,6 +135,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="people">
+                            <div class="people-de">
+                                <h5>John Doe</h5>
+                                <p>john@example.com</p>
+                            </div>
+                        </td>
                         <td class="time">
                             <p>11:30:49</p>
                         </td>
@@ -147,7 +174,8 @@
           appId: "1:1082668097264:web:1df75ded408c0a83592c35",
           measurementId: "G-KG34JPG6X3"
         };
-
+      
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
       </script>

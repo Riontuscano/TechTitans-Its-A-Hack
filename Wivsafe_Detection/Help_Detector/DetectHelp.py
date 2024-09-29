@@ -1,6 +1,7 @@
 import cv2
 import time
-from Help_Detector import HandTracking as htm
+import HandTracking as htm
+from location import LocationService  # Import location service
 
 class HandGestureDetector:
     def __init__(self, wCam=640, hCam=480, detectionCon=0.75):
@@ -36,6 +37,9 @@ class HandGestureDetector:
         self.flash_interval = 0.5  # Flash interval in seconds
         self.last_flash_time = 0
         self.show_help = True  # Toggle for flashing HELP
+
+        # Initialize location service
+        self.location_service = LocationService()
 
     def is_help_sign(self, lmList):
         """Detect if the hand gesture corresponds to one of the 'help' gestures."""
@@ -84,7 +88,6 @@ class HandGestureDetector:
                     # Add the gesture to the sequence
                     if len(self.gesture_sequence) == 0 or gesture != self.gesture_sequence[-1]:
                         self.gesture_sequence.append(gesture)
-                        print(f"Gesture Sequence: {self.gesture_sequence}")
 
                     # Only keep the last 3 gestures in the sequence
                     if len(self.gesture_sequence) > 3:
@@ -95,6 +98,10 @@ class HandGestureDetector:
                         self.help_detected = True
                         self.help_start_time = time.time()  # Set the start time for displaying HELP
                         self.gesture_sequence.clear()  # Clear sequence after detection
+                        
+                        # Fetch and display location
+                        self.location_service.get_location_and_display()  # Call your location service
+                        print("HELP detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")  # Print when help is detected
 
                 # Display the detected gesture on the image
                 if gesture:

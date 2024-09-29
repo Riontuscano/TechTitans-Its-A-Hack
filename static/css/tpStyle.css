@@ -187,8 +187,8 @@
 .people-de h5{
     font-size: 20px;
 }
-.people-de p{
-    font-size: 18px;
+.Cords p{
+    font-size: 20px;
 }
 
 .board .people{
@@ -224,3 +224,15 @@ tbody tr td{
     font-size: 25px;
 }
 
+.cctv-video{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.cctv-video video{
+    margin-right: 20px;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+}

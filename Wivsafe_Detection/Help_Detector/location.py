@@ -22,7 +22,7 @@ class LocationService:
             print(f"An error occurred: {e}")
             return None
     
-    def print_location_details(self):
+    def get_location_and_display(self):
         location_details = self.get_current_location_details()
         
         if location_details is not None:
@@ -37,7 +37,3 @@ class LocationService:
             print(f"Address: {location_details['address']}")
         else:
             print("Unable to retrieve your location details.")
-
-if __name__ == "__main__":
-    location_service = LocationService()
-    location_service.print_location_details()
